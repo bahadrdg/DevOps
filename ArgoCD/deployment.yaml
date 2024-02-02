@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: node-app
-        image: bahadrdg/node-app:19
+        image: bahadrdg/node-app:20
         ports:
         - containerPort: 5000
