@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment #deployment türünde olacak
+metadata:
+  name: node
+spec:
+  replicas: 3 # 3 pod olacak
+  selector:
+    matchLabels:
+      app: node
+template:
+  metadata:
+    labels:
+      app: node
+spec:
+  containers:
+  - name: node-cicd
+      image: bahadrdg/node:20 # image'ımız
+      ports:
+      - containerPort: 5000 # container dış portu
